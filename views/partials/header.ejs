@@ -10,6 +10,10 @@
             </li>
             <li><a href="/about"
                     class="<%= (typeof page !== 'undefined' && page === 'about') ? 'active' : '' %>">About</a></li>
+            <li><a href="/cart"
+                    class="cart-link <%= (typeof page !== 'undefined' && page === 'cart') ? 'active' : '' %>">
+                    Plate <span id="cart-count">0</span>
+                </a></li>
         </ul>
     </nav>
 </header>

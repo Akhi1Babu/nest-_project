@@ -1,0 +1,39 @@
+<%- include('./partials/head', { title: title }) %>
+    <%- include('./partials/header', { page: 'cart' }) %>
+
+        <main class="cart-page">
+            <div class="cart-hero">
+                <h1>My Plate</h1>
+                <p>Your curated selection of culinary delights.</p>
+            </div>
+
+            <div class="cart-container">
+                <div id="cart-items-container" class="cart-items">
+                    <!-- Items will be injected here by JS -->
+                    <div class="empty-cart-message">
+                        <p>Your plate is currently empty.</p>
+                        <a href="/menu" class="cta-button">Browse Menu</a>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <h2>Summary</h2>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Service Charge (10%)</span>
+                        <span id="cart-service">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+                    <a href="/menu" class="continue-shopping">Continue Ordering</a>
+                </div>
+            </div>
+        </main>
+
+        <%- include('./partials/footer') %>

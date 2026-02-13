@@ -35,7 +35,16 @@ app.get('/menu', (req, res) => {
 // About / Contact Page Route
 app.get('/about', (req, res) => {
   res.render('about', {
-    title: 'About Us | Saffran'
+    title: 'About Us | Saffran',
+    page: 'about'
+  });
+});
+
+// Cart Page Route
+app.get('/cart', (req, res) => {
+  res.render('cart', {
+    title: 'My Plate | Saffran',
+    page: 'cart'
   });
 });
 

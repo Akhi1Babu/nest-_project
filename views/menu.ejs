@@ -39,7 +39,10 @@
                                                 <p class="item-desc">
                                                     <%= item.description %>
                                                 </p>
-                                                <button class="add-to-cart-btn">Add to Plate</button>
+                                                <button class="add-to-cart-btn" data-id="<%= item.id %>"
+                                                    data-name="<%= item.name %>" data-price="<%= item.price %>"
+                                                    data-image="<%= item.image %>">Add to
+                                                    Plate</button>
                                             </div>
                                         </div>
                                         <% }); %>
