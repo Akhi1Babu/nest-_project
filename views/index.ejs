@@ -18,33 +18,45 @@
 
             <section class="specials-section">
                 <h2 class="section-title">Chef's Specials</h2>
-                <div class="specials-grid">
-                    <% if (typeof specials !=='undefined' && specials.length> 0) { %>
-                        <% specials.forEach(function(special) { %>
-                            <div class="special-card">
-                                <div class="card-inner">
-                                    <div class="card-front">
-                                        <img src="<%= special.image %>" alt="<%= special.name %>" class="special-img"
-                                            onerror="this.src='https://via.placeholder.com/300x200?text=Special'">
-                                        <h3>
-                                            <%= special.name %>
-                                        </h3>
-                                    </div>
-                                    <div class="card-back">
-                                        <p>
-                                            <%= special.description %>
-                                        </p>
-                                        <span class="price">
-                                            <%= special.price %>
-                                        </span>
-                                        <button class="order-btn">Order Now</button>
+                <div class="specials-content">
+                    <div class="specials-grid">
+                        <% if (typeof specials !=='undefined' && specials.length> 0) { %>
+                            <% specials.forEach(function(special) { %>
+                                <div class="special-card">
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <img src="<%= special.image %>" alt="<%= special.name %>"
+                                                class="special-img"
+                                                onerror="this.src='https://via.placeholder.com/300x200?text=Special'">
+                                            <h3>
+                                                <%= special.name %>
+                                            </h3>
+                                        </div>
+                                        <div class="card-back">
+                                            <p>
+                                                <%= special.description %>
+                                            </p>
+                                            <span class="price">
+                                                <%= special.price %>
+                                            </span>
+                                            <button class="order-btn">Order Now</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <% }); %>
-                                <% } else { %>
-                                    <p>Check back later for our daily specials!</p>
-                                    <% } %>
+                                <% }); %>
+                                    <% } else { %>
+                                        <p>Check back later for our daily specials!</p>
+                                        <% } %>
+                    </div>
+                    <div class="specials-text">
+                        <h3 class="specials-subtitle">Culinary Masterpieces</h3>
+                        <p>
+                            Our chefs meticulously curate each special to showcase the finest seasonal ingredients.
+                            From the marbled perfection of A5 Wagyu to the delicate artistry of our Omakase sushi,
+                            every dish is a testament to our passion for gastronomic excellence.
+                        </p>
+                        <a href="/menu" class="text-link">Explore Full Menu <span class="arrow">→</span></a>
+                    </div>
                 </div>
             </section>
         </main>
