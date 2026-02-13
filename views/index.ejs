@@ -1,0 +1,57 @@
+<%- include('./partials/head', { title: title }) %>
+    <%- include('./partials/header', { page: 'home' }) %>
+
+        <main class="home-page">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Exquisite Flavors, Artfully Crafted</h1>
+                    <p class="hero-subtitle">Experience the perfect harmony of traditional culinary mastery and
+                        contemporary innovation at Saffran.</p>
+                    <a href="/menu" class="cta-button">View Our Menu</a>
+                </div>
+                <div class="hero-3d-element" id="three-container">
+                    <!-- Three.js will inject canvas here -->
+                </div>
+            </section>
+
+
+
+            <section class="specials-section">
+                <h2 class="section-title">Chef's Specials</h2>
+                <div class="specials-grid">
+                    <% if (typeof specials !=='undefined' && specials.length> 0) { %>
+                        <% specials.forEach(function(special) { %>
+                            <div class="special-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="<%= special.image %>" alt="<%= special.name %>" class="special-img"
+                                            onerror="this.src='https://via.placeholder.com/300x200?text=Special'">
+                                        <h3>
+                                            <%= special.name %>
+                                        </h3>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>
+                                            <%= special.description %>
+                                        </p>
+                                        <span class="price">
+                                            <%= special.price %>
+                                        </span>
+                                        <button class="order-btn">Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }); %>
+                                <% } else { %>
+                                    <p>Check back later for our daily specials!</p>
+                                    <% } %>
+                </div>
+            </section>
+        </main>
+
+        <%- include('./partials/footer') %>
+
+            <!-- Three.js Library (CDN) -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+            <!-- Custom 3D Food Script -->
+            <script src="/js/three-food.js"></script>

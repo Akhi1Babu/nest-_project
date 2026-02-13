@@ -1,0 +1,52 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "name": "Signature Truffle Steak",
+            "price": "$45",
+            "description": "Premium wagyu infused with black truffle essence, served with glazed seasonal vegetables.",
+            "image": "/images/steak_final.jpg",
+            "category": "Main Course"
+        },
+        {
+            "id": 2,
+            "name": "Saffron Gold Risotto",
+            "price": "$28",
+            "description": "Saffron-infused arborio rice with edible gold dust and aged parmesan crisp.",
+            "image": "/images/risotto_final.jpg",
+            "category": "Main Course"
+        },
+        {
+            "id": 3,
+            "name": "Classic Lobster Thermidor",
+            "price": "$65",
+            "description": "Succulent lobster in a rich cognac cream sauce, gratinated with gruyère cheese.",
+            "image": "/images/lobster_final.jpg",
+            "category": "Main Course"
+        },
+        {
+            "id": 5,
+            "name": "Traditional Tiramisu",
+            "price": "$14",
+            "description": "Layered espresso-soaked sponge with mascaraone cream, dusted with valrhona cocoa.",
+            "image": "/images/tiramisu_final.jpg",
+            "category": "Dessert"
+        }
+    ],
+    "specials": [
+        {
+            "id": 101,
+            "name": "A5 Wagyu Experience",
+            "price": "$95",
+            "description": "A5 Japanese Wagyu seared to perfection, served with a smoke bubble presentation.",
+            "image": "/images/wagyu_final.jpg"
+        },
+        {
+            "id": 102,
+            "name": "Chef's Omakase Sushi",
+            "price": "$55",
+            "description": "Premium selection featuring seasonal catches and artistically plated delicacies.",
+            "image": "/images/sushi_final.jpg"
+        }
+    ]
+}

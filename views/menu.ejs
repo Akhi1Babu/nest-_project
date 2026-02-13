@@ -1,0 +1,55 @@
+<%- include('./partials/head', { title: title }) %>
+    <%- include('./partials/header', { page: 'menu' }) %>
+
+        <main class="menu-page">
+            <div class="menu-hero">
+                <h1 class="page-title">Our Menu</h1>
+                <p>A culinary journey through texture and taste.</p>
+            </div>
+
+            <% if (typeof menu !=='undefined' && menu.length> 0) { %>
+                <% const categories=[...new Set(menu.map(item=> item.category))];
+                    %>
+
+                    <div class="menu-categories">
+                        <% categories.forEach(category=> { %>
+                            <section class="category-section">
+                                <h2 class="category-title">
+                                    <%= category %>
+                                </h2>
+                                <div class="menu-grid">
+                                    <% menu.filter(item=> item.category === category).forEach(item => { %>
+                                        <div class="menu-card 3d-hover">
+                                            <div class="card-image-wrapper">
+                                                <img src="<%= item.image %>" alt="<%= item.name %>" class="menu-img"
+                                                    onerror="this.src='https://via.placeholder.com/300x200?text=Food'">
+                                                <div class="card-overlay">
+                                                    <span class="view-details">View Details</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-content">
+                                                <div class="card-header">
+                                                    <h3 class="item-name">
+                                                        <%= item.name %>
+                                                    </h3>
+                                                    <span class="item-price">
+                                                        <%= item.price %>
+                                                    </span>
+                                                </div>
+                                                <p class="item-desc">
+                                                    <%= item.description %>
+                                                </p>
+                                                <button class="add-to-cart-btn">Add to Plate</button>
+                                            </div>
+                                        </div>
+                                        <% }); %>
+                                </div>
+                            </section>
+                            <% }); %>
+                    </div>
+                    <% } else { %>
+                        <p>Our menu is currently being updated. Please check back soon.</p>
+                        <% } %>
+        </main>
+
+        <%- include('./partials/footer') %>
